@@ -1,0 +1,60 @@
+/* 1. Reset basico */
+/* Quita los márgenes que el navegador pone por defecto */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {   /*Modificaciones para el cuerpo*/
+    font-family: Arial, sans-serif; /*Cambia la fuente */
+    line-height: 1.5;
+    background-color: #ffffff; /* Fondo blanco */
+    color: #000000;            /* Texto negro p */
+}
+
+/* 2. encabezado y pie (nos piden fondo oscuro y texto claro) */
+header, footer {
+    background-color: #2a2a2a; /* Color oscuro */
+    color: #ffffff;            /* Texto blanco */
+    padding: 20px;
+    text-align: center;
+}
+
+/* 3. navegacion */
+nav ul {  /* Esto afecta a todos los links como sifuerauna caja contenedora*/
+    list-style: none; /* Quita los puntos de la lista */
+    margin-top: 10px;
+}
+
+nav ul li { /*esto afecta cada cuadradito*/
+    display: inline;  /*Pone uno al lado del otro para quese vea mejor*/
+    margin: 0 10px;
+}
+
+nav ul li a {/*esto afecta al texto clickeable*/
+    color: #ffffff;
+}
+
+/* Pseudoclase hover  */
+/* Cambia el color del link cuando el mouse está encima */
+nav ul li a:hover {
+    color: #3498db; 
+    text-decoration: underline;
+}
+
+/* 4. Contenido o main (Para que no quede pegado a los bordes) */
+main {
+    padding: 20px;
+    text-align: center; /*esto alinea eltexto del contenido al centro buscardes como limitarlo*/ 
+}
+
+section {
+    margin-bottom: 30px;
+}
+
+/* Esto evitaque las imagenes se desfazen y las mantiene al mismo tamanio */
+img {
+    max-width: 100%;
+    height: auto;
+    margin-top: 10px;
+}
