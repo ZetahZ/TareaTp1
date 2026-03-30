@@ -6,7 +6,7 @@
 }
 
 body {   /*Modificaciones para el cuerpo*/
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /*Cambia la fuente */
+    font-family: Arial, sans-serif; /*Cambia la fuente */
     line-height: 1.5;
     background-color: #ffffff; /* Fondo blanco */
     color: #171616;            /* Texto negro p */
@@ -44,8 +44,9 @@ nav ul li a:hover {
 
 /* 4. Contenido o main (Para que no quede pegado a los bordes) */
 main {
-    padding: 20px;
+    padding: 40px;
     text-align: center; /*esto alinea eltexto del contenido al centro buscardes como limitarlo*/ 
+    background-color: #f4f4f4;
 }
 
 section {
