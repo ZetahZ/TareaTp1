@@ -61,7 +61,7 @@ img {
 
 /* Estilo de formulario */
 
-/* Inputs */
+/* Entradas */
 input, textarea, select {
     width: 100%;
     max-width: 400px; /* Para que no sea tan ancho en pantallas grandes */
