@@ -58,3 +58,50 @@ img {
     height: auto;
     margin-top: 10px;
 }
+
+/* Estilo de formulario */
+
+/* Inputs */
+input, textarea, select {
+    width: 100%;
+    max-width: 400px; /* Para que no sea tan ancho en pantallas grandes */
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    display: inline-block;
+}
+
+/*a Borde verde y fondo claro*/
+input:valid, textarea:valid, select:valid {
+    border: 2px solid #2ecc71;
+    background-color: #fafffa;
+}
+
+/*b Borde rojo */
+input:invalid:not(:placeholder-shown), 
+textarea:invalid:not(:placeholder-shown) {
+    border: 2px solid #e74c3c;
+    background-color: #fffafa;
+}
+
+/* c Borde azul y sombra */
+input:focus, textarea:focus, select:focus {
+    border: 2px solid #3498db;
+    box-shadow: 0 0 8px rgba(52, 152, 219, 0.3);
+    outline: none;
+}
+
+/* Botón de enviar */
+.btn-enviar {
+    background-color: #2a2a2a;
+    color: white;
+    padding: 10px 25px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn-enviar:hover {
+    background-color: #3498db;
+}
