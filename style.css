@@ -52,7 +52,18 @@ h3 {
 }
 
 /* 2. encabezado y pie */
-header, footer {
+header {
+    background-color: var(--color-primary);
+    color: var(--color-white); 
+    padding: 1rem 5%; /* Un poco más de aire a los costados */
+    
+    /* CAMBIO CLAVE: Activamos Flexbox en el Header */
+    display: flex;
+    justify-content: space-between; /* Título a la izquierda, Nav a la derecha */
+    align-items: center;           /* Alinea ambos al centro verticalmente */
+}
+
+footer {
     background-color: var(--color-primary);
     color: var(--color-white); 
     padding: 20px;
@@ -60,26 +71,28 @@ header, footer {
 }
 
 /* 3. navegacion */
-nav ul {  /* Esto afecta a todos los links como sifuerauna caja contenedora*/
-    list-style: none; /* Quita los puntos de la lista */
-    margin-top: 10px;
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    
+    display: flex;
+    gap: 20px;
 }
 
-nav ul li { /*esto afecta cada cuadradito*/
-    display: inline;  /*Pone uno al lado del otro para quese vea mejor*/
-    margin: 0 10px;
-}
 
-nav ul li a {/*esto afecta al texto clickeable*/
+nav ul li a {
     color: var(--color-white); 
     text-decoration: none;
+    padding: 8px 15px; 
+    border-radius: var(--radius);
+    transition: all 0.3s ease; 
 }
 
-/* Pseudoclase hover  */
-/* Cambia el color del link cuando el mouse está encima */
 nav ul li a:hover {
-    color: var(--color-secondary); 
-    text-decoration: underline;
+    background-color: var(--color-secondary); /* Fondo azul */
+    color: var(--color-white);                /* Texto blanco */
+    text-decoration: none;                    /* Quitamos el subrayado para que parezca botón */
 }
 
 /* 4. Contenido o main (Para que no quede pegado a los bordes) */

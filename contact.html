@@ -1,84 +1,124 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Contacto - Fabrizio Mejia</title>
-    <link rel="stylesheet" href="style.css">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="style.css" />
 </head>
-<body>
+  <body>
     <header>
-        <h1>Bienvenido a mi primer Sitio Web - Fabrizio Mejia</h1>
-        <nav>
-            <ul>
-                <li><a href="index.html">Inicio</a></li>
-                <li><a href="index.html#sobre-mi">Sobre mí</a></li>
-                <li><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank">Algo Interesante!</a></li>
-                <li><a href="contact.html">Contacto</a></li>
-            </ul>
-        </nav>
+      <!-- Título a la izquierda -->
+      <h1>Bienvenido a mi primer Sitio Web - Fabrizio Mejia</h1>
+
+      <!-- Bloque de navegación a la derecha -->
+      <nav>
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="index.html#sobre-mi">Sobre mí</a></li>
+          <li>
+            <a
+              href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+              target="_blank"
+              >Algo Interesante!</a
+            >
+          </li>
+          <li><a href="contact.html">Contacto</a></li>
+        </ul>
+      </nav>
     </header>
 
     <main>
-        <section id="contacto">
-            <h2>Contacto</h2>
-            <p>Dejame tu mensaje para más información:</p>
-            
-            <form action="#">
-                <div>
-                    <label for="nombre">Nombre:</label><br>
-                    <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required minlength="3">
-                </div>
+      <section id="contacto">
+        <h2>Contacto</h2>
+        <p>Dejame tu mensaje para más información:</p>
 
-                <br>
+        <form action="#">
+          <div>
+            <label for="nombre">Nombre:</label><br />
+            <input
+              type="text"
+              id="nombre"
+              name="nombre"
+              placeholder="Tu nombre"
+              required
+              minlength="3"
+            />
+          </div>
 
-                <div>
-                    <label for="telefono">Telefono:</label><br>
-                    <input type="number" id="telefono" name="telefono" placeholder="3874839783" required>
-                </div>
+          <br />
 
-                <br>
+          <div>
+            <label for="telefono">Telefono:</label><br />
+            <input
+              type="number"
+              id="telefono"
+              name="telefono"
+              placeholder="3874839783"
+              required
+            />
+          </div>
 
-                <div>
-                    <label for="email">Email:</label><br>
-                    <input type="email" id="email" name="email" placeholder="nombre@correo.com" required>
-                </div>
+          <br />
 
-                <br>
+          <div>
+            <label for="email">Email:</label><br />
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="nombre@correo.com"
+              required
+            />
+          </div>
 
-                <div>
-                    <label for="motivo">Motivo de contacto:</label><br>
-                    <select id="motivo" name="motivo" required>
-                        <option value="">Seleccione una opción</option>
-                        <option value="presupuesto">Presupuesto impresion 3D</option>
-                        <option value="consulta">Consulta Programación</option>
-                        <option value="otros">Otros</option>
-                    </select>
-                </div>
+          <br />
 
-                <br>
+          <div>
+            <label for="motivo">Motivo de contacto:</label><br />
+            <select id="motivo" name="motivo" required>
+              <option value="">Seleccione una opción</option>
+              <option value="presupuesto">Presupuesto impresion 3D</option>
+              <option value="consulta">Consulta Programación</option>
+              <option value="otros">Otros</option>
+            </select>
+          </div>
 
-                <div>
-                    <label for="mensaje">Mensaje:</label><br>
-                    <textarea id="mensaje" name="mensaje" rows="4" placeholder="Escribí al menos 10 caracteres..." required minlength="10"></textarea>
-                </div>
+          <br />
 
-                <br>
+          <div>
+            <label for="mensaje">Mensaje:</label><br />
+            <textarea
+              id="mensaje"
+              name="mensaje"
+              rows="4"
+              placeholder="Escribí al menos 10 caracteres..."
+              required
+              minlength="10"
+            ></textarea>
+          </div>
 
-                <div>
-                    <input type="checkbox" id="terminos" name="terminos" required>
-                    <label for="terminos">Acepto los términos y condiciones</label>
-                </div>
+          <br />
 
-                <br>
+          <div>
+            <input type="checkbox" id="terminos" name="terminos" required />
+            <label for="terminos">Acepto los términos y condiciones</label>
+          </div>
 
-                <button type="submit" class="btn-enviar">Enviar</button>
-            </form>
-        </section>
+          <br />
+
+          <button type="submit" class="btn-enviar">Enviar</button>
+        </form>
+      </section>
     </main>
 
     <footer>
-        <p>&copy; 2026 - ZetahZ Digital. Salta Argentina.</p>
+      <p>&copy; 2026 - ZetahZ Digital. Salta Argentina.</p>
     </footer>
-</body>
+  </body>
 </html>
