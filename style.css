@@ -1,21 +1,42 @@
-/* 1. Reset basico */
-/* Quita los márgenes que el navegador pone por defecto */
+:root {
+    /* Paleta de colores */
+    --color-primary: #2a2a2a;
+    --color-secondary: #3498db;
+    --color-accent: #e67e22;
+    --color-text: #171616;
+    --color-bg: #f4f4f4;
+    --color-white: #ffffff;
+    --color-success: #2ecc71;
+    --color-success-bg: #fafffa;
+    --color-error: #e74c3c;
+    --color-error-bg: #fffafa;
+    
+    /* Estilos de bordes y sombras */
+    --radius: 8px;
+    --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    
+    /* Tipografía */
+    --font-main: 'Segoe UI', Arial, sans-serif;
+}
+
+/* 1. Reset y Estilos Globales */
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
-body {   /*Modificaciones para el cuerpo*/
-    font-family: Arial, sans-serif; /*Cambia la fuente */
-    line-height: 1.5;
-    background-color: #ffffff; /* Fondo blanco */
-    color: #171616;            /* Texto negro p */
+body {
+    font-family: var(--font-main);
+    line-height: 1.6;
+    background-color: var(--color-white);
+    color: var(--color-text);
 }
 
-/* 2. encabezado y pie (nos piden fondo oscuro y texto claro) */
+/* 2. encabezado y pie */
 header, footer {
-    background-color: #2a2a2a; /* Color oscuro */
-    color: #ffffff;            /* Texto blanco */
+    background-color: var(--color-primary);
+    color: var(--color-white); 
     padding: 20px;
     text-align: center;
 }
@@ -32,13 +53,14 @@ nav ul li { /*esto afecta cada cuadradito*/
 }
 
 nav ul li a {/*esto afecta al texto clickeable*/
-    color: #ffffff;
+    color: var(--color-white); 
+    text-decoration: none;
 }
 
 /* Pseudoclase hover  */
 /* Cambia el color del link cuando el mouse está encima */
 nav ul li a:hover {
-    color: #3498db; 
+    color: var(--color-secondary); 
     text-decoration: underline;
 }
 
@@ -46,7 +68,7 @@ nav ul li a:hover {
 main {
     padding: 40px;
     text-align: center; /*esto alinea eltexto del contenido al centro buscardes como limitarlo*/ 
-    background-color: #f4f4f4;
+    background-color: var(--color-bg);
 }
 
 section {
@@ -67,42 +89,43 @@ input, textarea, select {
     width: 100%;
     max-width: 400px; /* Para que no sea tan ancho en pantallas grandes */
     padding: 10px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
+    border-radius: var(--radius); 
+    border: 1px solid #ccc; 
     box-sizing: border-box;
     display: inline-block;
 }
 
 /*a Borde verde y fondo claro*/
 input:valid, textarea:valid, select:valid {
-    border: 2px solid #2ecc71;
-    background-color: #fafffa;
+    border: 2px solid var(--color-success);
+    background-color: var(--color-success-bg);
 }
 
 /*b Borde rojo */
 input:invalid:not(:placeholder-shown), 
 textarea:invalid:not(:placeholder-shown) {
-    border: 2px solid #e74c3c;
-    background-color: #fffafa;
+    border: 2px solid var(--color-error);
+    background-color: var(--color-error-bg);
 }
 
 /* c Borde azul y sombra */
 input:focus, textarea:focus, select:focus {
-    border: 2px solid #3498db;
-    box-shadow: 0 0 8px rgba(52, 152, 219, 0.3);
+    border: 2px solid var(--color-secondary); 
+    box-shadow: var(--shadow); 
     outline: none;
 }
 
 /* Botón de enviar */
 .btn-enviar {
-    background-color: #2a2a2a;
-    color: white;
+    background-color: var(--color-primary); /* Reemplazado #2a2a2a */
+    color: var(--color-white); /* Reemplazado white */
     padding: 10px 25px;
     border: none;
-    border-radius: 5px;
+    border-radius: var(--radius); /* Usamos la variable de radio */
     cursor: pointer;
 }
 
 .btn-enviar:hover {
-    background-color: #3498db;
+    background-color: var(--color-secondary);
 }
+/* Versión final del TP */
