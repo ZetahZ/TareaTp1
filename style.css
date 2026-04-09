@@ -1,191 +1,253 @@
 :root {
-    /* Paleta de colores */
-    --color-primary: #2a2a2a;
-    --color-secondary: #3498db;
-    --color-accent: #e67e22;
-    --color-text: #171616;
-    --color-bg: #f4f4f4;
-    --color-white: #ffffff;
-    --color-success: #2ecc71;
-    --color-success-bg: #fafffa;
-    --color-error: #e74c3c;
-    --color-error-bg: #fffafa;
-    
-    /* Estilos de bordes y sombras */
-    --radius: 8px;
-    --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    
-    /* Tipografía */
-    --font-main: 'Open Sans', sans-serif;
-    --font-title: 'Montserrat', sans-serif;
+  /* Paleta de colores */
+  --color-primary: #2a2a2a;
+  --color-secondary: #3498db;
+  --color-accent: #e67e22;
+  --color-text: #171616;
+  --color-bg: #f4f4f4;
+  --color-white: #ffffff;
+  --color-success: #2ecc71;
+  --color-success-bg: #fafffa;
+  --color-error: #e74c3c;
+  --color-error-bg: #fffafa;
+
+  /* Estilos de bordes y sombras */
+  --radius: 8px;
+  --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+  /* Tipografía */
+  --font-main: "Open Sans", sans-serif;
+  --font-title: "Montserrat", sans-serif;
 }
 
 /* 1. Reset y Estilos Globales */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    font-family: var(--font-main);
-    line-height: 1.6;  
-    font-size: 1rem;    
-    background-color: var(--color-white);
-    color: var(--color-text);
+  font-family: var(--font-main);
+  line-height: 1.6;
+  font-size: 1rem;
+  background-color: var(--color-white);
+  color: var(--color-text);
 }
 
 /* Tamaños con REM  */
 h1 {
-    font-family: var(--font-title);
-    font-size: 2.5rem;
+  font-family: var(--font-title);
+  font-size: 2.5rem;
 }
 
 h2 {
-    font-family: var(--font-title);
-    font-size: 1.8rem;
+  font-family: var(--font-title);
+  font-size: 1.8rem;
 }
 
 h3 {
-    font-family: var(--font-title);
-    font-size: 1.3rem;
+  font-family: var(--font-title);
+  font-size: 1.3rem;
 }
 
 /* 2. encabezado y pie */
 header {
-    background-color: var(--color-primary);
-    color: var(--color-white); 
-    padding: 1rem 5%; /* Un poco más de aire a los costados */
-    
-    /* CAMBIO CLAVE: Activamos Flexbox en el Header */
-    display: flex;
-    justify-content: space-between; /* Título a la izquierda, Nav a la derecha */
-    align-items: center;           /* Alinea ambos al centro verticalmente */
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  padding: 1rem 5%; /* Un poco más de aire a los costados */
+
+  /* CAMBIO CLAVE: Activamos Flexbox en el Header */
+  display: flex;
+  justify-content: space-between; /* Título a la izquierda, Nav a la derecha */
+  align-items: center; /* Alinea ambos al centro verticalmente */
 }
 
 footer {
-    background-color: var(--color-primary);
-    color: var(--color-white); 
-    padding: 20px;
-    text-align: center;
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  padding: 20px;
+  text-align: center;
 }
 
 /* 3. navegacion */
 nav ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    
-    display: flex;
-    gap: 20px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  display: flex;
+  gap: 20px;
 }
 
-
 nav ul li a {
-    color: var(--color-white); 
-    text-decoration: none;
-    padding: 8px 15px; 
-    border-radius: var(--radius);
-    transition: all 0.3s ease; 
+  color: var(--color-white);
+  text-decoration: none;
+  padding: 8px 15px;
+  border-radius: var(--radius);
+  transition: all 0.3s ease;
 }
 
 nav ul li a:hover {
-    background-color: var(--color-secondary); /* Fondo azul */
-    color: var(--color-white);                /* Texto blanco */
-    text-decoration: none;                    /* Quitamos el subrayado para que parezca botón */
+  background-color: var(--color-secondary); /* Fondo azul */
+  color: var(--color-white); /* Texto blanco */
+  text-decoration: none; /* Quitamos el subrayado para que parezca botón */
 }
 
 /* 4. Contenido o main (Para que no quede pegado a los bordes) */
 main {
-    padding: 40px;
-    text-align: center; /*esto alinea eltexto del contenido al centro buscardes como limitarlo*/ 
-    background-color: var(--color-bg);
+  padding: 40px;
+  text-align: center; /*esto alinea eltexto del contenido al centro buscardes como limitarlo*/
+  background-color: var(--color-bg);
 }
 
 section {
-    margin-bottom: 30px;
+  margin-bottom: 30px;
 }
 
 /* Esto evitaque las imagenes se desfazen y las mantiene al mismo tamanio */
 img {
-    max-width: 100%;
-    height: auto;
-    margin-top: 10px;
+  max-width: 100%;
+  height: auto;
+  margin-top: 10px;
 }
 
 /* Estilo de formulario */
 
 /* Entradas */
-input, textarea, select {
-    width: 100%;
-    max-width: 400px; /* Para que no sea tan ancho en pantallas grandes */
-    padding: 10px;
-    border-radius: var(--radius); 
-    border: 1px solid #ccc; 
-    box-sizing: border-box;
-    display: inline-block;
+input,
+textarea,
+select {
+  width: 100%;
+  max-width: 400px; /* Para que no sea tan ancho en pantallas grandes */
+  padding: 10px;
+  border-radius: var(--radius);
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  display: inline-block;
 }
 
 /*a Borde verde y fondo claro*/
-input:valid, textarea:valid, select:valid {
-    border: 2px solid var(--color-success);
-    background-color: var(--color-success-bg);
+input:valid,
+textarea:valid,
+select:valid {
+  border: 2px solid var(--color-success);
+  background-color: var(--color-success-bg);
 }
 
 /*b Borde rojo */
-input:invalid:not(:placeholder-shown), 
+input:invalid:not(:placeholder-shown),
 textarea:invalid:not(:placeholder-shown) {
-    border: 2px solid var(--color-error);
-    background-color: var(--color-error-bg);
+  border: 2px solid var(--color-error);
+  background-color: var(--color-error-bg);
 }
 
 /* c Borde azul y sombra */
-input:focus, textarea:focus, select:focus {
-    border: 2px solid var(--color-secondary); 
-    box-shadow: var(--shadow); 
-    outline: none;
+input:focus,
+textarea:focus,
+select:focus {
+  border: 2px solid var(--color-secondary);
+  box-shadow: var(--shadow);
+  outline: none;
 }
 
 /* Botón de enviar */
 .btn-enviar {
-    background-color: var(--color-primary); /* Reemplazado #2a2a2a */
-    color: var(--color-white); /* Reemplazado white */
-    padding: 10px 25px;
-    border: none;
-    border-radius: var(--radius); /* Usamos la variable de radio */
-    cursor: pointer;
+  background-color: var(--color-primary); /* Reemplazado #2a2a2a */
+  color: var(--color-white); /* Reemplazado white */
+  padding: 10px 25px;
+  border: none;
+  border-radius: var(--radius); /* Usamos la variable de radio */
+  cursor: pointer;
 }
 
 .btn-enviar:hover {
-    background-color: var(--color-secondary);
+  background-color: var(--color-secondary);
 }
 
 /* Punto 4*/
 
 .contenedor-tarjetas {
-    display: flex;         
-    flex-wrap: wrap;      
-    gap: 20px;             
-    justify-content: center; 
-    padding: 20px 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  padding: 20px 0;
 }
 
 .tarjeta {
-    flex: 1 1 280px;        
-    
-    background-color: var(--color-white);
-    padding: 20px;
-    border-radius: var(--radius);
-    box-shadow: var(--shadow); 
-    
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  flex: 1 1 280px;
+
+  background-color: var(--color-white);
+  padding: 20px;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
 }
 
 .tarjeta:hover {
-    transform: translateY(-4px); 
-    box-shadow: 0 10px 20px rgba(0,0,0,0.2); 
+  transform: translateY(-4px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 
+/*Punto 5*/
+.hero {
+  background: linear-gradient(
+    135deg,
+    var(--color-primary),
+    var(--color-secondary)
+  );
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 80vh;
+  text-align: center;
+  color: var(--color-white);
+  padding: 20px;
+}
 
+.hero-content h1 {
+  font-size: 3.5rem;
+  margin-bottom: 10px;
+}
 
-/* Versión final del TP */
+.hero-content h2 {
+  font-size: 1.5rem;
+  margin-bottom: 30px;
+}
+
+.btn-cta {
+  background-color: var(--color-accent);
+  color: var(--color-white);
+  padding: 15px 30px;
+  text-decoration: none;
+  border-radius: 50px;
+  font-weight: bold;
+  transition: transform 0.3s ease;
+  display: inline-block;
+}
+
+.btn-cta:hover {
+  transform: scale(1.1);
+  background-color: #d35400;
+}
+
+footer {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.redes {
+  margin-top: 20px;
+}
+
+.redes a {
+  color: var(--color-secondary);
+  margin: 0 15px;
+  text-decoration: none;
+}
