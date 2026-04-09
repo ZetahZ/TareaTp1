@@ -3,101 +3,80 @@
   <head>
     <meta charset="UTF-8" />
     <title>Portfolio - Fabrizio Mejia</title>
-
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans:wght@400;600&display=swap"
-      rel="stylesheet"
-    />
-
+    <!-- Tus fuentes y CSS -->
     <link rel="stylesheet" href="style.css" />
   </head>
-  <body>
-    <header>
-      <h1>Bienvenido a mi primer Sitio Web - Fabrizio Mejia</h1>
 
+  <body class="layout">
+
+    <!--header-->
+    <header>
+      <h1>Mi primer pagina Web</h1>
       <nav>
         <ul>
           <li><a href="#inicio">Inicio</a></li>
-          <li><a href="#sobre-mi">Sobre mí</a></li>
-          <li>
-            <a
-              href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"
-              target="_blank"
-              >Algo Interesante!</a
-            >
-          </li>
+          <li><a href="#proyectos">Proyectos</a></li>
           <li><a href="contact.html">Contacto</a></li>
         </ul>
       </nav>
     </header>
 
-    <section class="hero">
-      <div class="hero-content">
-        <h1>Fabrizio Mejia</h1>
-        <h2>Desarrollador Web Junior</h2>
-        <a href="#servicios" class="btn-cta">Ver mis servicios</a>
-      </div>
-    </section>
+    <!--sidebar-->
+    <aside class="sidebar">
+      <h3>Explorar</h3>
+      <ul>
+        <li><a href="#servicios">Servicios 3D</a></li>
+        <li><a href="#sobre-mi">Habilidades</a></li>
+      </ul>
+      <hr />
+      <p>Servicios activos: 3</p>
+    </aside>
 
+    <!--main-->
     <main>
+      <!--Hero-->
+      <section class="hero">
+        <div class="hero-content">
+          <h1>Fabrizio Mejia</h1>
+          <h2>Desarrollador Web Junior</h2>
+          <a href="#proyectos" class="btn-cta">Ver mis proyectos</a>
+        </div>
+      </section>
+
+      <!-- Sección de Bienvenida -->
       <section id="inicio">
-        <h2>Bienvenido al desarrollo de mi primera pagina web</h2>
+        <h2>Bienvenido</h2>
         <p>
           Este sitio es parte de la materia Prácticas Profesionalizantes II.
-          <br />
-          Es el primer intento de crear una pagina web desde 0.
         </p>
-        <img src="images/foto1.jpg" alt="Imagen de codigo web " />
       </section>
 
-      <section id="sobre-mi">
-        <h2>Tecnologías aprendidas</h2>
-        <ul>
-          <li>Uso de la Terminal (Git Bash)</li>
-          <li>Configuración de Git</li>
-          <li>Estructura HTML5</li>
-          <li><a href="contact.html">Contacto</a></li>
-        </ul>
-        <img src="images/foto3.jpg" alt="Imagen de programador" />
-      </section>
-
-      <section id="servicios">
+      <!-- Sección de Tarjetas (Punto 4) -->
+      <section id="proyectos">
         <h2>Mis Servicios</h2>
         <div class="contenedor-tarjetas">
           <article class="tarjeta">
             <h3>Impresión 3D</h3>
-            <p>
-              Fabricación de piezas personalizadas y figuras articuladas con
-              tecnología Bambu Lab.
-            </p>
+            <p>Fabricación de piezas con tecnología Bambu Lab.</p>
           </article>
-
           <article class="tarjeta">
             <h3>Programación</h3>
-            <p>
-              Desarrollo de interfaces web modernas utilizando HTML, CSS y
-              lógica en Python.
-            </p>
+            <p>Desarrollo de interfaces con HTML, CSS y Python.</p>
           </article>
-
           <article class="tarjeta">
             <h3>Ventas Digitales</h3>
-            <p>
-              Asesoramiento y comercialización de hardware con asesoramiento personalizado.
-            </p>
+            <p>Comercialización de accesorios tecnológicos.</p>
           </article>
         </div>
       </section>
     </main>
 
+    <!-- ZONA: footer -->
     <footer>
       <p>&copy; 2026 - ZetahZ Digital. Salta, Argentina.</p>
       <div class="redes">
-        <a href="https://github.com" target="_blank">GitHub</a>
-        <a href="https://linkedin.com" target="_blank">LinkedIn</a>
-        <a href="https://instagram.com" target="_blank">Instagram</a>
+        <a href="#">GitHub</a>
+        <a href="#">LinkedIn</a>
       </div>
     </footer>
   </body>
