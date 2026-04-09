@@ -28,3 +28,33 @@ Como estudiante de programación y técnico que realiza reparaciones de hardware
 En conclusión, aunque la interfaz gráfica es cómoda para el día a día, la terminal representa el lenguaje directo con la máquina, siendo indispensable para cualquier profesional técnico o desarrollador y por ello es importante que lo entendamos.
 
 Al usar el comando which git para entontrar la direccion de git, la consola tiro la siguiente direccion: /mingw64/bin/git.
+
+# Portfolio Profesional - Fabrizio Mejia
+
+### Descripción
+Proyecto de desarrollo web realizado para la materia Prácticas Profesionalizantes II. Es un sitio estético y funcional que presenta mis servicios de impresión 3D, programación y ventas.
+
+### Link al sitio en vivo
+[Hacé clic aquí para ver mi página]https://zetahz.github.io/TareaTp1/
+
+### Tecnologías Utilizadas
+* **HTML5**: Estructura semántica.
+* **CSS3**: Estilos personalizados y variables.
+* **Flexbox**: Alineación de componentes y navegación.
+* **Grid Layout**: Estructura general de la página (Punto 6).
+* **Responsive Design**: Diseño adaptado con Mobile-First y Media Queries (Punto 8).
+* **Galería Inteligente**: Uso de `auto-fit` y `minmax` (Punto 7).
+
+### Vistas del Proyecto (Resoluciones)
+1. **Mobile (393px)**
+![Vista Mobile](iphone.png)
+
+2. **Tablet (820px)**
+![Vista Tablet](ipad.png)
+
+3. **Desktop (1024px)**
+![Vista Desktop](laptop.png)
+
+### Repositorio
+* **Commits**: Más de 10 commits descriptivos siguiendo el flujo de trabajo.
+* **Uso de Branches**: Trabajo organizado en ramas por cada funcionalidad.

@@ -35,274 +35,47 @@ body {
   color: var(--color-text);
 }
 
-/* Tamaños con REM  */
-h1 {
-  font-family: var(--font-title);
-  font-size: 2.5rem;
-}
-
-h2 {
-  font-family: var(--font-title);
-  font-size: 1.8rem;
-}
-
+h1,
+h2,
 h3 {
   font-family: var(--font-title);
+}
+h1 {
+  font-size: 2.5rem;
+}
+h2 {
+  font-size: 1.8rem;
+}
+h3 {
   font-size: 1.3rem;
 }
 
-/* 2. encabezado y pie */
-header {
-  background-color: var(--color-primary);
-  color: var(--color-white);
-  padding: 1rem 5%; /* Un poco más de aire a los costados */
-
-  /* CAMBIO CLAVE: Activamos Flexbox en el Header */
-  display: flex;
-  justify-content: space-between; /* Título a la izquierda, Nav a la derecha */
-  align-items: center; /* Alinea ambos al centro verticalmente */
-}
-
-footer {
-  background-color: var(--color-primary);
-  color: var(--color-white);
-  padding: 20px;
-  text-align: center;
-}
-
-/* 3. navegacion */
-nav ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-
-  display: flex;
-  gap: 20px;
-}
-
-nav ul li a {
-  color: var(--color-white);
-  text-decoration: none;
-  padding: 8px 15px;
-  border-radius: var(--radius);
-  transition: all 0.3s ease;
-}
-
-nav ul li a:hover {
-  background-color: var(--color-secondary); /* Fondo azul */
-  color: var(--color-white); /* Texto blanco */
-  text-decoration: none; /* Quitamos el subrayado para que parezca botón */
-}
-
-/* 4. Contenido o main (Para que no quede pegado a los bordes) */
-main {
-  padding: 40px;
-  text-align: center; /*esto alinea eltexto del contenido al centro buscardes como limitarlo*/
-  background-color: var(--color-bg);
-}
-
-section {
-  margin-bottom: 30px;
-}
-
-/* Esto evitaque las imagenes se desfazen y las mantiene al mismo tamanio */
-img {
-  max-width: 100%;
-  height: auto;
-  margin-top: 10px;
-}
-
-/* Estilo de formulario */
-
-/* Entradas */
-input,
-textarea,
-select {
-  width: 100%;
-  max-width: 400px; /* Para que no sea tan ancho en pantallas grandes */
-  padding: 10px;
-  border-radius: var(--radius);
-  border: 1px solid #ccc;
-  box-sizing: border-box;
-  display: inline-block;
-}
-
-/*a Borde verde y fondo claro*/
-input:valid,
-textarea:valid,
-select:valid {
-  border: 2px solid var(--color-success);
-  background-color: var(--color-success-bg);
-}
-
-/*b Borde rojo */
-input:invalid:not(:placeholder-shown),
-textarea:invalid:not(:placeholder-shown) {
-  border: 2px solid var(--color-error);
-  background-color: var(--color-error-bg);
-}
-
-/* c Borde azul y sombra */
-input:focus,
-textarea:focus,
-select:focus {
-  border: 2px solid var(--color-secondary);
-  box-shadow: var(--shadow);
-  outline: none;
-}
-
-/* Botón de enviar */
-.btn-enviar {
-  background-color: var(--color-primary); /* Reemplazado #2a2a2a */
-  color: var(--color-white); /* Reemplazado white */
-  padding: 10px 25px;
-  border: none;
-  border-radius: var(--radius); /* Usamos la variable de radio */
-  cursor: pointer;
-}
-
-.btn-enviar:hover {
-  background-color: var(--color-secondary);
-}
-
-/* Punto 4*/
-
-/*Punto 7*/
-
-.contenedor-tarjetas {
-  display: grid;
-  /* La clave del punto 7: se ajusta solo entre 280px y el total del espacio */
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 1.25rem; /* Espaciado pedido por la consigna */
-  padding: 20px;
-}
-
-.tarjeta {
-  background-color: white;
-  padding: 30px;
-  border-radius: 12px; /* Borde redondeado */
-  text-align: center;
-  border: 1px solid #e0e0e0;
-
-  /* Sombra suave inicial */
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
-
-  /* Transición suave para el efecto hover */
-  transition:
-    transform 0.3s ease,
-    box-shadow 0.3s ease;
-}
-
-/* Efecto Hover pedido por la consigna */
-.tarjeta:hover {
-  transform: translateY(-8px); /* Sube un poquito */
-  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.15); /* La sombra se intensifica */
-  border-color: var(
-    --color-accent
-  ); /* Opcional: el borde cambia al color naranja */
-}
-
-.icono {
-  font-size: 3rem;
-  margin-bottom: 15px;
-}
-
-.tarjeta h3 {
-  margin-bottom: 10px;
-  color: var(--color-primary);
-}
-
-.tarjeta p {
-  color: #555;
-  line-height: 1.6;
-}
-
-/*Punto 5*/
-.hero {
-  background: linear-gradient(
-    135deg,
-    var(--color-primary),
-    var(--color-secondary)
-  );
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 80vh;
-  text-align: center;
-  color: var(--color-white);
-  padding: 20px;
-}
-
-.hero-content h1 {
-  font-size: 3.5rem;
-  margin-bottom: 10px;
-}
-
-.hero-content h2 {
-  font-size: 1.5rem;
-  margin-bottom: 30px;
-}
-
-.btn-cta {
-  background-color: var(--color-accent);
-  color: var(--color-white);
-  padding: 15px 30px;
-  text-decoration: none;
-  border-radius: 50px;
-  font-weight: bold;
-  transition: transform 0.3s ease;
-  display: inline-block;
-}
-
-.btn-cta:hover {
-  transform: scale(1.1);
-  background-color: #d35400;
-}
-
-footer {
-  background-color: var(--color-primary);
-  color: var(--color-white);
-  padding: 40px 20px;
-  text-align: center;
-}
-
-.redes {
-  margin-top: 20px;
-}
-
-.redes a {
-  color: var(--color-secondary);
-  margin: 0 15px;
-  text-decoration: none;
-}
-
-/*PUNTO 6*/
-
+/* 2. Estructura BASE (Mobile First - Punto 8) */
 .layout {
   display: grid;
-  grid-template-columns: 250px 1fr;
-  grid-template-rows: auto 1fr auto;
-
+  grid-template-columns: 1fr; /* Una columna en celular */
   grid-template-areas:
-    "header header"
-    "sidebar main"
-    "footer footer";
-
+    "header"
+    "main"
+    "footer";
   min-height: 100vh;
 }
 
 header {
   grid-area: header;
-  z-index: 10;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  background-color: var(--color-primary);
+  color: var(--color-white);
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 40px;
+  padding: 0 5%;
   height: 80px;
+  z-index: 10;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
 }
 
 .sidebar {
+  display: none; /* OCULTO EN CELULAR (Punto 8) */
   grid-area: sidebar;
   background-color: #1a1a1a;
   color: #ffffff;
@@ -317,37 +90,140 @@ main {
 
 footer {
   grid-area: footer;
-}
-
-.sidebar h3 {
-  color: var(--color-accent);
-  font-size: 0.85rem;
-  text-transform: uppercase;
-  letter-spacing: 1.5px;
-  margin-bottom: 25px;
-  border-left: 3px solid var(--color-accent);
-  padding-left: 10px;
-}
-
-.sidebar ul {
-  list-style: none;
-  padding: 0;
-}
-
-.sidebar ul li {
-  margin-bottom: 18px;
-}
-
-.sidebar ul li a {
-  color: #b3b3b3;
-  text-decoration: none;
-  font-size: 0.95rem;
-  transition: all 0.3s ease;
-}
-
-.sidebar ul li a:hover {
+  background-color: var(--color-primary);
   color: var(--color-white);
-  padding-left: 8px;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+section {
+  padding: 20px 10px; /* Padding reducido en celular (Punto 8) */
+}
+
+/* 3. Navegación */
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 15px;
+}
+
+nav ul li a {
+  color: var(--color-white);
+  text-decoration: none;
+  padding: 8px 12px;
+  border-radius: var(--radius);
+  transition: 0.3s;
+}
+
+nav ul li a:hover {
+  background-color: var(--color-secondary);
+}
+
+/* 4. PUNTO 7: Galería Auto-responsive */
+.contenedor-tarjetas {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.25rem;
+  padding: 20px 0;
+}
+
+.tarjeta {
+  background-color: var(--color-white);
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+  text-align: center;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.tarjeta:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.15);
+}
+
+.icono {
+  font-size: 3rem;
+  margin-bottom: 15px;
+}
+
+/* 5. Hero Section */
+.hero {
+  background: linear-gradient(
+    135deg,
+    var(--color-primary),
+    var(--color-secondary)
+  );
+  min-height: 60vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+.btn-cta {
+  background-color: var(--color-accent);
+  color: white;
+  padding: 15px 30px;
+  text-decoration: none;
+  border-radius: 50px;
+  font-weight: bold;
+  display: inline-block;
+  margin-top: 20px;
+}
+
+/* 6. Formulario */
+input,
+textarea,
+select {
+  width: 100%;
+  max-width: 400px;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: var(--radius);
+  border: 1px solid #ccc;
+}
+
+input:focus {
+  border: 2px solid var(--color-secondary);
+  outline: none;
+}
+
+
+/* (a) Tablet (768px): Aparece Sidebar */
+@media (min-width: 768px) {
+  .layout {
+    grid-template-columns: 250px 1fr;
+    grid-template-areas:
+      "header header"
+      "sidebar main"
+      "footer footer";
+  }
+  .sidebar {
+    display: block;
+  }
+  section {
+    padding: 40px 20px;
+  } /* Más aire en pantallas grandes */
+}
+
+/* (b) Laptop (1024px): Centrado */
+@media (min-width: 1024px) {
+  .layout {
+    max-width: 1200px;
+    margin: 0 auto;
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.1);
+  }
+}
+
+/* (c) Pro (1440px): Más ancho */
+@media (min-width: 1440px) {
+  .layout {
+    max-width: 1400px;
+  }
 }
 
 .hero {
