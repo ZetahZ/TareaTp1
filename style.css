@@ -159,4 +159,33 @@ input:focus, textarea:focus, select:focus {
 .btn-enviar:hover {
     background-color: var(--color-secondary);
 }
+
+/* Punto 4*/
+
+.contenedor-tarjetas {
+    display: flex;         
+    flex-wrap: wrap;      
+    gap: 20px;             
+    justify-content: center; 
+    padding: 20px 0;
+}
+
+.tarjeta {
+    flex: 1 1 280px;        
+    
+    background-color: var(--color-white);
+    padding: 20px;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow); 
+    
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.tarjeta:hover {
+    transform: translateY(-4px); 
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2); 
+}
+
+
+
 /* Versión final del TP */
